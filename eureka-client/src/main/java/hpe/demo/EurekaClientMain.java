@@ -37,7 +37,7 @@ class ServiceInstanceRestController {
 	}
 
 	@RequestMapping("/invoke-api")
-	public String ss() {
+	public String invokeAPI() {
 		List<ServiceInstance> list = this.discoveryClient.getInstances("eureka-client");
 		if (list.size() > 0) {
 			String uri = list.get(0).getUri().toString();
